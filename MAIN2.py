@@ -33,12 +33,14 @@ def omove():  # добавляет о вместо введенного числ
         if h == q:
             l_[h - 1] = 'o'
 
-def input_num():  # функция ввода числа
-    global q  # введенное число
-    q = int(input('введите число от 1 до 9 '))
-    if q not in l_:
+global q  # введенное число
+    allow_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+    q = input('введите число от 1 до 9 ')
+    if q not in allow_list or int(q) not in l_ :
         print("введите другое число")
         input_num()
+    else:
+        q = int(q)
 def win():  # функция условия победы
     global a
     if l_[0] == l_[1] == l_[2] or l_[0] == l_[3] == l_[6] or l_[0] == l_[4] == l_[8] or l_[1] == l_[4] == l_[7] or l_[2] == l_[5] == l_[8] or l_[3] == l_[4] == l_[5] or l_[6] == l_[7] == l_[8] or l_[6] == l_[4] == l_[2]:
