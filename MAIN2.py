@@ -48,7 +48,7 @@ def win():  # функция условия победы
     else:
         a = 0  # если нет победителя
 def play():  #  функция самой игры, возвращает победителя
-    global win_o, win_x, draw, c
+    global win_o, win_x, draw
     for i in range(9):
         if n % 2 == 1:  # если номер хода нечетный, то записываем х
             input_num()  # вводим число
